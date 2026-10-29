@@ -33,8 +33,7 @@
                                                          dark:focus:ring-indigo-600
                                                          rounded-md
                                                          shadow-sm
-                                                         " rows="5" required> {{ $post-> body }}
-                            </textarea>
+                                                         " rows="5" required>{{ $post-> body }}</textarea>
                         </div>
 
 
