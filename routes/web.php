@@ -4,10 +4,23 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostReportController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+//REPORT ROUTES HERE
+Route::get('/posts/report', [PostReportController::class, 'index'])
+    -> name('posts.reports.index');
+
+Route::get('/posts/reports/pdf', [PostReportController::class, 'exportPdf'])
+    -> name('posts.reports.pdf');
+
+Route::get('/posts/reports/excel', [PostReportController::class, 'exportCsv'])
+    -> name('posts.reports.csv');
+
+//END OF REPORT ROUTES
 
 Route::resource('posts', PostController::class);
 

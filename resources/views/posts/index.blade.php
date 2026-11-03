@@ -4,11 +4,14 @@
         {{ __('Blog Posts')}}
     </h1>
 
-    <a href="{{ route('posts.create') }}">
-        <x-primary-button>
-            {{ __('Create New Post') }}
-        </x-primary-button>
-    </a>
+    <div>
+        <a href="{{ route('posts.create') }}">
+            <x-primary-button>
+                {{ __('Create New Post') }}
+            </x-primary-button>
+        </a>
+    </div>
+    
 </div>
 <hr>
 
